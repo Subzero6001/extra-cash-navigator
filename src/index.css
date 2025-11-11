@@ -17,8 +17,25 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Verde escuro principal */
+    --primary: 152 50% 17%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Verde médio para CTAs */
+    --cta-green: 152 42% 31%;
+    --cta-green-foreground: 0 0% 100%;
+
+    /* Dourado */
+    --gold: 43 65% 53%;
+    --gold-foreground: 152 50% 17%;
+
+    /* Bronze */
+    --bronze: 30 20% 44%;
+    --bronze-foreground: 0 0% 100%;
+
+    /* Verde claro */
+    --light-green: 130 30% 94%;
+    --light-green-foreground: 152 50% 17%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -29,14 +46,18 @@ All colors MUST be HSL.
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 62.8% 55%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0.5rem;
+    --radius: 1.25rem;
+    
+    /* Gradientes */
+    --gradient-primary: linear-gradient(210deg, hsl(152 42% 31%) 37%, hsl(152 50% 17%) 100%);
+    --gradient-gold: linear-gradient(50deg, hsl(43 65% 53%) 0%, hsl(30 20% 44%) 100%);
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +77,45 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 152 50% 17%;
+    --foreground: 0 0% 100%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 152 45% 20%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 152 50% 17%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 152 50% 17%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --cta-green: 152 42% 31%;
+    --cta-green-foreground: 0 0% 100%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --gold: 43 65% 53%;
+    --gold-foreground: 152 50% 17%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --bronze: 30 20% 44%;
+    --bronze-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --light-green: 152 20% 25%;
+    --light-green-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --secondary: 152 30% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 152 20% 25%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 152 30% 25%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 152 20% 30%;
+    --input: 152 20% 30%;
+    --ring: 43 65% 53%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -101,5 +134,10 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
 }

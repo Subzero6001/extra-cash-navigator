@@ -23,6 +23,22 @@ export default {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
+        "cta-green": {
+          DEFAULT: "hsl(var(--cta-green))",
+          foreground: "hsl(var(--cta-green-foreground))",
+        },
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          foreground: "hsl(var(--gold-foreground))",
+        },
+        bronze: {
+          DEFAULT: "hsl(var(--bronze))",
+          foreground: "hsl(var(--bronze-foreground))",
+        },
+        "light-green": {
+          DEFAULT: "hsl(var(--light-green))",
+          foreground: "hsl(var(--light-green-foreground))",
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
