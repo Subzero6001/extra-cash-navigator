@@ -27,14 +27,21 @@ export default {
           DEFAULT: "hsl(var(--cta-green))",
           foreground: "hsl(var(--cta-green-foreground))",
         },
+        leather: {
+          DEFAULT: "hsl(var(--leather))",
+          foreground: "hsl(var(--leather-foreground))",
+        },
         gold: {
           DEFAULT: "hsl(var(--gold))",
           foreground: "hsl(var(--gold-foreground))",
+          light: "hsl(var(--gold-light))",
         },
         bronze: {
           DEFAULT: "hsl(var(--bronze))",
           foreground: "hsl(var(--bronze-foreground))",
         },
+        pearl: "hsl(var(--pearl))",
+        cream: "hsl(var(--cream))",
         "light-green": {
           DEFAULT: "hsl(var(--light-green))",
           foreground: "hsl(var(--light-green-foreground))",

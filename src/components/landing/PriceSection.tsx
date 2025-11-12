@@ -1,72 +1,85 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Sparkles } from "lucide-react";
 import ebookCover from "@/assets/ebook-cover.jpg";
 
 export const PriceSection = () => {
   return (
-    <section id="preco" className="py-16 md:py-32 bg-background">
-      <div className="container mx-auto max-w-[1305px] px-4">
+    <section id="preco" className="py-20 md:py-32 bg-gradient-to-b from-cream via-background to-cream relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(212,175,55,0.1)_0%,_transparent_70%)] pointer-events-none" />
+      
+      <div className="container mx-auto max-w-[1400px] px-4 relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-[43px] font-bold text-center text-muted-foreground mb-16 font-[Montserrat]"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-primary mb-20"
         >
           E QUANTO CUSTA TER 51 CAMINHOS REAIS PARA GANHAR DINHEIRO:
         </motion.h2>
 
-        <div className="bg-light-green rounded-[32px] p-4 md:p-8">
-          <div className="grid md:grid-cols-[30%_40%_30%] items-start">
-            <div></div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="relative -mt-12 md:-mt-24"
-            >
-              <div className="bg-gradient-to-br from-gold to-bronze rounded-[19px] p-8 md:p-12 shadow-2xl text-center space-y-6">
-                <div className="-mt-20 md:-mt-32 mb-4">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-[600px] mx-auto relative"
+        >
+          {/* Spotlight Effect */}
+          <div className="absolute inset-0 bg-gradient-to-b from-gold/20 via-transparent to-transparent rounded-[40px] blur-3xl animate-glow-pulse" />
+          
+          {/* Main Card */}
+          <div className="relative bg-gradient-to-br from-gold-light via-gold to-bronze rounded-[40px] p-2 shadow-luxury">
+            <div className="bg-pearl rounded-[36px] p-8 md:p-12 text-center space-y-8">
+              {/* Ebook 3D */}
+              <motion.div
+                initial={{ y: -50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                className="relative -mt-32 mb-8"
+              >
+                <div className="absolute inset-0 bg-gold/30 rounded-2xl blur-2xl" />
+                <div className="relative bg-gradient-to-br from-gold-light to-bronze p-2 rounded-2xl shadow-luxury transform hover:scale-105 transition-transform duration-300">
                   <img
                     src={ebookCover}
                     alt="51 Formas de Fazer Renda Extra"
-                    className="w-48 md:w-64 mx-auto rounded-xl shadow-2xl"
+                    className="w-56 mx-auto rounded-xl shadow-2xl"
                   />
                 </div>
+              </motion.div>
 
-                <h3 className="text-2xl md:text-[34px] font-bold text-background font-[Montserrat]">
-                  OFERTA ESPECIAL DE LANÇAMENTO
-                </h3>
-
-                <p className="text-xl md:text-[30px] font-bold text-background/80 line-through">
-                  DE R$ 167,90 POR:
-                </p>
-
-                <div className="space-y-2">
-                  <p className="text-6xl md:text-[87px] font-bold text-background leading-none">
-                    12X R$ 3,77
-                  </p>
-                  <p className="text-lg text-background/90">ou R$ 37,90 à vista</p>
-                </div>
-
-                <Button
-                  variant="cta-primary"
-                  size="xl"
-                  className="w-full text-xl"
-                  asChild
-                >
-                  <a href="#checkout">QUERO COMEÇAR A GANHAR AGORA</a>
-                </Button>
-
-                <p className="text-lg text-background/90 italic">
-                  Oferta válida apenas esta semana
-                </p>
+              {/* Badge Oferta */}
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-cta-green to-primary text-gold px-6 py-3 rounded-full font-bold uppercase tracking-wider shadow-lg">
+                <Sparkles className="w-5 h-5" />
+                Oferta Especial de Lançamento
               </div>
-            </motion.div>
 
-            <div></div>
+              <p className="text-2xl md:text-3xl font-bold text-muted-foreground line-through">
+                DE R$ 167,90 POR:
+              </p>
+
+              <div className="space-y-4">
+                <p className="text-6xl md:text-7xl lg:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-cta-green via-primary to-cta-green leading-none animate-glow-pulse">
+                  12X R$ 3,77
+                </p>
+                <p className="text-xl text-foreground/70">ou R$ 37,90 à vista</p>
+              </div>
+
+              <Button
+                variant="liquid-glass"
+                size="xl"
+                className="w-full h-20 text-xl"
+                asChild
+              >
+                <a href="#checkout">QUERO COMEÇAR A GANHAR AGORA</a>
+              </Button>
+
+              <p className="text-lg text-gold font-bold italic animate-pulse">
+                ⏰ Oferta válida apenas esta semana
+              </p>
+            </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -3,22 +3,24 @@ import { Shield } from "lucide-react";
 
 export const GuaranteeSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-primary">
-      <div className="container mx-auto max-w-[1300px] px-4">
-        <div className="grid md:grid-cols-[40%_60%] gap-8 items-center">
+    <section className="py-20 md:py-32 bg-gradient-to-br from-primary via-cta-green to-primary relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-gold/5 pointer-events-none" />
+      <div className="container mx-auto max-w-[1300px] px-4 relative z-10">
+        <div className="grid md:grid-cols-[40%_60%] gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             className="flex justify-center"
           >
-            <div className="relative">
-              <div className="w-64 h-64 rounded-full bg-gradient-to-br from-gold to-bronze flex items-center justify-center shadow-2xl">
-                <div className="text-center space-y-2">
-                  <Shield className="w-20 h-20 text-background mx-auto" />
-                  <p className="text-2xl font-bold text-background">GARANTIA</p>
-                  <p className="text-xl font-bold text-background">INCONDICIONAL</p>
-                  <p className="text-4xl font-bold text-background">7 DIAS</p>
+            <div className="relative animate-float">
+              <div className="absolute inset-0 bg-gold/30 rounded-full blur-3xl animate-glow-pulse" />
+              <div className="relative w-72 h-72 rounded-full bg-gradient-to-br from-gold-light via-gold to-bronze flex items-center justify-center shadow-luxury border-8 border-pearl/20 animate-rotate-slow">
+                <div className="text-center space-y-3">
+                  <Shield className="w-24 h-24 text-primary mx-auto drop-shadow-2xl" />
+                  <p className="text-3xl font-bold text-primary">GARANTIA</p>
+                  <p className="text-2xl font-bold text-primary">INCONDICIONAL</p>
+                  <p className="text-6xl font-bold text-primary">7 DIAS</p>
                 </div>
               </div>
             </div>

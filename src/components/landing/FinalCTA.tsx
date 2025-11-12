@@ -3,8 +3,9 @@ import { Button } from "@/components/ui/button";
 
 export const FinalCTA = () => {
   return (
-    <section className="py-16 md:py-24 bg-primary">
-      <div className="container mx-auto max-w-[1000px] px-4">
+    <section className="relative py-20 md:py-32 bg-gradient-to-br from-primary via-cta-green to-primary overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(212,175,55,0.1)_0%,_transparent_70%)]" />
+      <div className="container mx-auto max-w-[1100px] px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

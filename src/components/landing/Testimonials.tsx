@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { Star, Quote } from "lucide-react";
+import { LeatherTexture } from "@/components/effects/LeatherTexture";
 import testimonial1 from "@/assets/testimonial-1.jpg";
 import testimonial2 from "@/assets/testimonial-2.jpg";
 import testimonial3 from "@/assets/testimonial-3.jpg";
@@ -27,13 +28,17 @@ const testimonials = [
 
 export const Testimonials = () => {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-gold to-bronze">
-      <div className="container mx-auto max-w-[1300px] px-4">
+    <section className="relative py-20 md:py-32 overflow-hidden">
+      <LeatherTexture className="absolute inset-0">
+        <div className="absolute inset-0" />
+      </LeatherTexture>
+      
+      <div className="container mx-auto max-w-[1400px] px-4 relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-[43px] font-bold text-center text-background mb-12 font-[Montserrat]"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-pearl mb-16"
         >
           QUEM JÁ ESTÁ FAZENDO ACONTECER
         </motion.h2>
@@ -42,33 +47,64 @@ export const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30, rotateY: -10 }}
+              whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1 * index }}
-              className="bg-background rounded-[24px] p-8 space-y-4 shadow-xl hover:shadow-2xl transition-all"
+              transition={{ delay: 0.15 * index, duration: 0.6 }}
+              whileHover={{ 
+                y: -10,
+                rotateY: 5,
+                transition: { duration: 0.3 }
+              }}
+              className="relative transform-3d group"
             >
-              <div className="flex justify-center mb-4">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-24 h-24 rounded-full object-cover border-4 border-gold"
-                />
-              </div>
+              {/* Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-bronze/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              {/* Card */}
+              <div className="relative bg-pearl/95 backdrop-blur-sm rounded-3xl p-8 space-y-6 shadow-luxury border border-gold/20 group-hover:border-gold/40 transition-all duration-300">
+                {/* Quote Mark Background */}
+                <Quote className="absolute top-8 right-8 w-20 h-20 text-gold/10" />
+                
+                {/* Photo with Gold Frame */}
+                <div className="flex justify-center relative z-10">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-br from-gold-light to-gold rounded-full blur-md animate-glow-pulse" />
+                    <div className="relative bg-gradient-to-br from-gold-light to-bronze p-1.5 rounded-full shadow-luxury">
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        className="w-28 h-28 rounded-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
 
-              <div className="flex justify-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-gold text-gold" />
-                ))}
-              </div>
+                {/* Stars */}
+                <div className="flex justify-center gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, scale: 0 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.5 + (i * 0.1) }}
+                    >
+                      <Star className="w-6 h-6 fill-gold text-gold drop-shadow-lg" />
+                    </motion.div>
+                  ))}
+                </div>
 
-              <p className="text-gray-700 leading-relaxed text-center">
-                "{testimonial.text}"
-              </p>
+                {/* Testimonial Text */}
+                <p className="text-foreground/80 text-lg leading-relaxed text-center relative z-10 font-[Inter]">
+                  "{testimonial.text}"
+                </p>
 
-              <div className="text-center pt-4 border-t">
-                <p className="font-bold text-primary">{testimonial.name}</p>
-                <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                {/* Author Info */}
+                <div className="text-center pt-4 border-t-2 border-gold/20 relative z-10">
+                  <p className="font-bold text-xl text-primary">{testimonial.name}</p>
+                  <p className="text-sm text-muted-foreground mt-1">{testimonial.location}</p>
+                </div>
               </div>
             </motion.div>
           ))}
