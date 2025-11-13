@@ -7,38 +7,38 @@ import ebookCover from "@/assets/ebook-cover.jpg";
 
 export const PriceSection = () => {
   return (
-    <section id="preco" className="relative py-16 md:py-24 lg:py-32 bg-gradient-to-b from-background via-pearl to-background overflow-hidden">
+    <section id="preco" className="relative py-12 sm:py-16 md:py-24 lg:py-32 bg-gradient-to-b from-background via-pearl to-background overflow-hidden">
       <GoldPattern />
       <AnimatedOrbs />
       
-      <div className="container mx-auto max-w-[1200px] px-4 sm:px-6 relative z-10">
+      <div className="container mx-auto max-w-[1200px] px-3 sm:px-4 md:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4 md:mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary mb-3 sm:mb-4 md:mb-6 px-2 sm:px-0">
             INVISTA NO SEU FUTURO
           </h2>
-          <p className="text-lg sm:text-xl md:text-2xl text-foreground/70 max-w-2xl mx-auto px-4">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/70 max-w-2xl mx-auto px-2 sm:px-4">
             Acesso completo ao guia + todos os bônus
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="relative order-2 lg:order-1"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-bronze/20 rounded-3xl blur-2xl" />
+            <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-bronze/20 rounded-2xl sm:rounded-3xl blur-2xl" />
             <div className="relative transform hover:scale-105 transition-transform duration-500">
               <img
                 src={ebookCover}
                 alt="51 Formas de Fazer Renda Extra"
-                className="w-full max-w-[400px] mx-auto drop-shadow-2xl"
+                className="w-full max-w-[280px] sm:max-w-[350px] md:max-w-[400px] mx-auto drop-shadow-2xl"
                 style={{
                   filter: "drop-shadow(0 25px 50px rgba(13, 40, 24, 0.5))"
                 }}
@@ -52,31 +52,31 @@ export const PriceSection = () => {
             viewport={{ once: true }}
             className="relative order-1 lg:order-2"
           >
-            <div className="absolute -top-6 -right-4 sm:-right-6 bg-gradient-to-br from-gold via-gold-light to-gold text-primary font-black text-center p-4 sm:p-6 rounded-2xl md:rounded-3xl shadow-luxury transform rotate-12 animate-float z-20">
-              <div className="text-xs sm:text-sm uppercase tracking-wider">Economize</div>
-              <div className="text-2xl sm:text-3xl md:text-4xl">85%</div>
+            <div className="absolute -top-4 -right-3 sm:-top-6 sm:-right-4 md:-right-6 bg-gradient-to-br from-gold via-gold-light to-gold text-primary font-black text-center p-3 sm:p-4 md:p-6 rounded-xl sm:rounded-2xl md:rounded-3xl shadow-luxury transform rotate-12 animate-float z-20">
+              <div className="text-[10px] sm:text-xs uppercase tracking-wider">Economize</div>
+              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">85%</div>
             </div>
 
-            <div className="relative bg-gradient-to-br from-pearl to-cream rounded-3xl md:rounded-[40px] p-6 sm:p-8 md:p-12 shadow-luxury border-4 border-gold/30">
-              <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-gold/10 rounded-3xl md:rounded-[40px]" />
+            <div className="relative bg-gradient-to-br from-pearl to-cream rounded-2xl sm:rounded-3xl md:rounded-[40px] p-4 sm:p-6 md:p-10 lg:p-12 shadow-luxury border-2 sm:border-4 border-gold/30">
+              <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-gold/10 rounded-2xl sm:rounded-3xl md:rounded-[40px]" />
               
-              <div className="relative space-y-6 sm:space-y-8">
-                <div className="text-center space-y-3 sm:space-y-4">
-                  <p className="text-base sm:text-lg md:text-xl text-foreground/60 line-through">
+              <div className="relative space-y-4 sm:space-y-6 md:space-y-8">
+                <div className="text-center space-y-2 sm:space-y-3 md:space-y-4">
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground/60 line-through">
                     De R$ 248,00
                   </p>
                   <div>
-                    <p className="text-lg sm:text-xl md:text-2xl text-foreground/80 mb-2">Por apenas</p>
-                    <p className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cta-green to-gold animate-glow-pulse">
+                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/80 mb-2">Por apenas</p>
+                    <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cta-green to-gold animate-glow-pulse">
                       R$ 37,90
                     </p>
                   </div>
-                  <p className="text-base sm:text-lg md:text-xl text-foreground/70">
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground/70">
                     Pagamento único • Acesso vitalício
                   </p>
                 </div>
 
-                <div className="space-y-3 sm:space-y-4">
+                <div className="space-y-2 sm:space-y-3 md:space-y-4">
                   {[
                     "Guia completo com 51 formas de renda extra",
                     "3 bônus exclusivos (valor R$ 155+)",
@@ -90,10 +90,10 @@ export const PriceSection = () => {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.1 * index }}
-                      className="flex items-start gap-3"
+                      className="flex items-start gap-2 sm:gap-3"
                     >
-                      <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-gold flex-shrink-0 mt-1" />
-                      <span className="text-sm sm:text-base md:text-lg text-foreground/80">{item}</span>
+                      <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-gold flex-shrink-0 mt-0.5 sm:mt-1" />
+                      <span className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/80">{item}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -101,14 +101,14 @@ export const PriceSection = () => {
                 <Button 
                   variant="liquid-glass" 
                   size="xl" 
-                  className="w-full text-base sm:text-lg h-14 sm:h-16" 
+                  className="w-full text-sm sm:text-base md:text-lg h-12 sm:h-14 md:h-16" 
                   asChild
                 >
                   <a href="#checkout">GARANTIR MINHA VAGA AGORA</a>
                 </Button>
 
-                <div className="flex items-center justify-center gap-3 sm:gap-4 text-xs sm:text-sm text-foreground/60">
-                  <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-gold" />
+                <div className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4 text-[10px] sm:text-xs md:text-sm text-foreground/60">
+                  <Shield className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-gold flex-shrink-0" />
                   <span>Pagamento 100% seguro e criptografado</span>
                 </div>
               </div>
@@ -120,15 +120,15 @@ export const PriceSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-12 md:mt-16 text-center space-y-4 sm:space-y-6"
+          className="mt-8 sm:mt-12 md:mt-16 text-center space-y-3 sm:space-y-4 md:space-y-6"
         >
-          <div className="inline-flex items-center gap-2 sm:gap-3 bg-gold/20 backdrop-blur-sm border border-gold/40 rounded-full px-4 sm:px-6 py-2 sm:py-3">
-            <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-gold" />
-            <span className="text-xs sm:text-sm md:text-base font-bold text-primary uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 sm:gap-3 bg-gold/20 backdrop-blur-sm border border-gold/40 rounded-full px-3 sm:px-4 md:px-6 py-2 sm:py-3">
+            <Clock className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-gold flex-shrink-0" />
+            <span className="text-[10px] sm:text-xs md:text-sm lg:text-base font-bold text-primary uppercase tracking-wider">
               Oferta por tempo limitado
             </span>
           </div>
-          <p className="text-base sm:text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto px-4">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground/70 max-w-2xl mx-auto px-2 sm:px-4">
             O preço pode aumentar a qualquer momento. Garanta o seu acesso agora!
           </p>
         </motion.div>
