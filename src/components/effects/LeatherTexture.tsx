@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 interface LeatherTextureProps {
-  children: ReactNode;
+  children?: ReactNode;
   className?: string;
   withStitching?: boolean;
 }
@@ -12,6 +12,18 @@ export const LeatherTexture = ({
   className,
   withStitching = false 
 }: LeatherTextureProps) => {
+  if (!children) {
+    return (
+      <div 
+        className={cn(
+          "leather-texture absolute inset-0 pointer-events-none",
+          withStitching && "leather-stitching",
+          className
+        )}
+      />
+    );
+  }
+  
   return (
     <div 
       className={cn(

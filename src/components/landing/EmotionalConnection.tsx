@@ -4,68 +4,53 @@ import { LeatherTexture } from "@/components/effects/LeatherTexture";
 
 export const EmotionalConnection = () => {
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-      className="relative py-20 md:py-32"
-    >
-      <LeatherTexture className="absolute inset-0">
-        <div className="absolute inset-0" />
-      </LeatherTexture>
+    <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden">
+      <LeatherTexture />
       
-      <div className="container mx-auto max-w-[1100px] px-4 relative z-10">
+      <div className="container mx-auto max-w-[900px] px-4 sm:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="relative bg-pearl/95 backdrop-blur-xl rounded-[32px] p-8 md:p-16 shadow-luxury border border-gold/20"
+          className="relative bg-pearl/90 backdrop-blur-md rounded-3xl md:rounded-[40px] p-6 sm:p-8 md:p-12 lg:p-16 shadow-luxury border-4 border-gold/20"
         >
-          {/* Decorative Corner Elements */}
-          <div className="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-gold/30 rounded-tl-[32px]" />
-          <div className="absolute bottom-0 right-0 w-20 h-20 border-b-2 border-r-2 border-gold/30 rounded-br-[32px]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-gold/5 rounded-3xl md:rounded-[40px]" />
           
-          <div className="flex flex-col items-center text-center space-y-8">
-            <motion.div
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
-              className="relative"
-            >
-              <div className="absolute inset-0 bg-gold/20 rounded-full blur-xl animate-glow-pulse" />
-              <div className="relative bg-gradient-to-br from-cta-green to-primary p-4 rounded-full">
-                <MessageCircle className="w-12 h-12 text-gold" />
-              </div>
-            </motion.div>
-            
-            <h2 className="text-3xl md:text-4xl font-bold text-primary">
-              E aí? Tudo bem?
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, type: "spring" }}
+            className="relative mx-auto w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mb-6 md:mb-8 bg-gradient-to-br from-cta-green to-primary rounded-2xl md:rounded-3xl flex items-center justify-center shadow-xl"
+          >
+            <MessageCircle className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-gold" />
+          </motion.div>
+
+          <div className="relative space-y-4 sm:space-y-5 md:space-y-6 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary leading-tight">
+              Eu sei o que você está passando...
             </h2>
             
-            <div className="text-lg md:text-xl text-foreground/80 space-y-6 leading-relaxed max-w-[950px] font-[Inter]">
+            <div className="space-y-3 sm:space-y-4 md:space-y-5 text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/80 leading-relaxed">
               <p>
-                Tô aqui pra te ajudar com algo que eu sei que tá te tirando o sono: aquela sensação de que não importa quanto você trabalhe, o dinheiro nunca é suficiente, né?
+                Você trabalha o mês inteiro, mas quando chega o final, parece que o dinheiro{" "}
+                <span className="font-bold text-gold">sumiu</span>.
               </p>
               <p>
-                Olha, eu sei bem como é. Já vi MUITA gente passando pelo mesmo perrengue que você. Querendo ganhar mais, mas sem ter capital pra investir alto. Sem tempo pra fazer faculdade de novo. Sem saber por onde começar.
+                Você quer dar uma vida melhor pra sua família, mas sempre falta aquele{" "}
+                <span className="font-bold text-gold">dinheiro extra</span>.
               </p>
-              <motion.p 
-                className="font-bold text-2xl md:text-3xl text-primary relative inline-block"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5 }}
-              >
-                A boa notícia?{" "}
-                <span className="text-gold">Você não precisa de nada disso pra virar esse jogo.</span>
-              </motion.p>
+              <p>
+                E toda vez que surge uma despesa inesperada, você sente aquele aperto no peito...{" "}
+                <span className="font-bold text-gold">"E agora?"</span>
+              </p>
+              <p className="pt-4 text-primary font-bold text-xl sm:text-2xl md:text-3xl">
+                Mas e se eu te disser que existe uma saída?
+              </p>
             </div>
           </div>
         </motion.div>
       </div>
-    </motion.section>
+    </section>
   );
 };
