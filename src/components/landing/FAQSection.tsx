@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { GoldPattern } from "@/components/effects/GoldPattern";
 
 const faqs = [
   {
@@ -43,16 +44,23 @@ const faqs = [
 
 export const FAQSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-background to-light-green">
-      <div className="container mx-auto max-w-[1000px] px-4">
-        <motion.h2
+    <section className="relative py-16 md:py-24 bg-gradient-to-b from-pearl to-cream overflow-hidden">
+      <GoldPattern />
+      
+      <div className="container mx-auto max-w-[1000px] px-4 sm:px-6 relative z-10">
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-[43px] font-bold text-center text-primary mb-12 font-[Montserrat]"
+          className="text-center mb-12 md:mb-16"
         >
-          PERGUNTAS FREQUENTES
-        </motion.h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-bold text-primary mb-4 leading-tight">
+            PERGUNTAS FREQUENTES
+          </h2>
+          <p className="text-lg md:text-xl text-foreground/70">
+            Tire suas dúvidas antes de começar
+          </p>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -60,20 +68,32 @@ export const FAQSection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-3 md:space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem
+              <motion.div
                 key={index}
-                value={`item-${index}`}
-                className="bg-background border-2 border-primary rounded-[20px] px-6"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 * index }}
               >
-                <AccordionTrigger className="text-left text-lg font-bold text-primary hover:text-cta-green">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-gray-700 text-base leading-relaxed pt-4">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
+                <AccordionItem
+                  value={`item-${index}`}
+                  className="relative bg-background/90 backdrop-blur-sm border-2 border-gold/20 hover:border-gold/40 rounded-2xl md:rounded-3xl px-4 sm:px-6 md:px-8 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-gold/0 via-gold/5 to-gold/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  
+                  <AccordionTrigger className="relative text-left text-base sm:text-lg md:text-xl font-bold text-primary hover:text-cta-green py-5 md:py-6 transition-colors [&>svg]:text-gold [&>svg]:w-5 [&>svg]:h-5 md:[&>svg]:w-6 md:[&>svg]:h-6">
+                    <span className="pr-4">{faq.question}</span>
+                  </AccordionTrigger>
+                  
+                  <AccordionContent className="relative text-foreground/80 text-sm sm:text-base md:text-lg leading-relaxed pt-2 pb-6">
+                    {faq.answer}
+                  </AccordionContent>
+                  
+                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-gold via-gold-light to-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-l-2xl" />
+                </AccordionItem>
+              </motion.div>
             ))}
           </Accordion>
         </motion.div>

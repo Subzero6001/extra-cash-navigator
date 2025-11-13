@@ -21,8 +21,8 @@
     --primary: 152 70% 10%; /* Deep Luxurious Green #0D2818 */
     --primary-foreground: 45 30% 95%;
 
-    --cta-green: 152 50% 17%; /* Medium Premium Green #1B4332 */
-    --cta-green-foreground: 43 65% 53%;
+    --cta-green: 152 55% 35%; /* Lighter Premium Green for CTA visibility */
+    --cta-green-foreground: 45 30% 95%;
 
     /* Luxury Leather & Gold */
     --leather: 30 25% 30%; /* Rich Leather Brown #5D4E37 */
@@ -97,8 +97,8 @@
     --primary: 152 70% 10%;
     --primary-foreground: 45 30% 95%;
 
-    --cta-green: 152 50% 17%;
-    --cta-green-foreground: 43 65% 53%;
+    --cta-green: 152 55% 35%;
+    --cta-green-foreground: 45 30% 95%;
 
     --leather: 30 25% 30%;
     --leather-foreground: 45 30% 95%;
