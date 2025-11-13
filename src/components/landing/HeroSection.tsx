@@ -11,32 +11,32 @@ export const HeroSection = () => {
       <GoldPattern />
       <AnimatedOrbs />
       
-      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 max-w-7xl relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center lg:text-left space-y-6 md:space-y-8"
+            className="text-center lg:text-left space-y-4 sm:space-y-6 md:space-y-8"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-gold/20 backdrop-blur-sm border border-gold/40 rounded-full px-4 sm:px-6 py-2 sm:py-3 mx-auto lg:mx-0"
+              className="inline-flex items-center gap-2 bg-gold/20 backdrop-blur-sm border border-gold/40 rounded-full px-3 sm:px-4 md:px-6 py-2 sm:py-3 mx-auto lg:mx-0"
             >
-              <span className="text-gold text-xs sm:text-sm md:text-base font-bold uppercase tracking-wider">
-                ✨ 51 Formas Testadas e Aprovadas
+              <span className="text-gold text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-wide">
+                ✨ 51 Formas Testadas
               </span>
             </motion.div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary-foreground leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary-foreground leading-tight px-2 sm:px-0">
               Descubra Como Fazer
-              <span className="block text-gold mt-2">Renda Extra</span>
-              <span className="block mt-2">Em 2025</span>
+              <span className="block text-gold mt-1 sm:mt-2">Renda Extra</span>
+              <span className="block mt-1 sm:mt-2">Em 2025</span>
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-primary-foreground/90 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-primary-foreground/90 leading-relaxed max-w-2xl mx-auto lg:mx-0 px-2 sm:px-0">
               51 maneiras práticas, testadas e sem enrolação para você aumentar sua renda ainda este mês — mesmo começando do zero.
             </p>
 
@@ -44,12 +44,12 @@ export const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start px-2 sm:px-0"
             >
               <Button 
                 variant="liquid-glass" 
                 size="xl" 
-                className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-12 h-14 sm:h-16" 
+                className="w-full sm:w-auto text-sm sm:text-base md:text-lg px-4 sm:px-8 md:px-12 h-12 sm:h-14 md:h-16" 
                 asChild
               >
                 <a href="#preco">QUERO COMEÇAR AGORA</a>
@@ -60,18 +60,18 @@ export const HeroSection = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 pt-4"
+              className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 md:gap-6 pt-2 sm:pt-4 px-2 sm:px-0"
             >
-              <div className="flex items-center gap-2 text-primary-foreground/80 text-xs sm:text-sm">
-                <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-gold" />
+              <div className="flex items-center gap-1.5 sm:gap-2 text-primary-foreground/80 text-[10px] sm:text-xs md:text-sm">
+                <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-gold flex-shrink-0" />
                 <span>Garantia 7 dias</span>
               </div>
-              <div className="flex items-center gap-2 text-primary-foreground/80 text-xs sm:text-sm">
-                <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-gold" />
+              <div className="flex items-center gap-1.5 sm:gap-2 text-primary-foreground/80 text-[10px] sm:text-xs md:text-sm">
+                <Zap className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-gold flex-shrink-0" />
                 <span>Acesso Imediato</span>
               </div>
-              <div className="flex items-center gap-2 text-primary-foreground/80 text-xs sm:text-sm">
-                <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-gold" />
+              <div className="flex items-center gap-1.5 sm:gap-2 text-primary-foreground/80 text-[10px] sm:text-xs md:text-sm">
+                <Shield className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-gold flex-shrink-0" />
                 <span>100% Seguro</span>
               </div>
             </motion.div>
