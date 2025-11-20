@@ -39,7 +39,7 @@ export const BenefitsGrid = () => {
           AGORA, IMAGINA SÓ:
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-12 md:mb-16">
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}
@@ -59,7 +59,7 @@ export const BenefitsGrid = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-gold/30 to-bronze/30 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               {/* Card Principal */}
-              <div className="relative bg-gradient-to-br from-gold-light via-gold to-bronze rounded-3xl p-8 shadow-luxury border-2 border-gold/40 group-hover:border-gold transition-all duration-300">
+              <div className="relative bg-gradient-to-br from-gold-light via-gold to-bronze rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 shadow-luxury border-2 border-gold/40 group-hover:border-gold transition-all duration-300">
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-10">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(255,255,255,0.1)_0%,_transparent_50%)]" />
@@ -73,14 +73,14 @@ export const BenefitsGrid = () => {
                   >
                     <div className="relative">
                       <div className="absolute inset-0 bg-primary/30 rounded-full blur-xl animate-glow-pulse" />
-                      <div className="relative bg-primary p-5 rounded-full shadow-luxury">
-                        <benefit.icon className="w-12 h-12 text-gold" />
+                      <div className="relative bg-primary p-3 sm:p-4 md:p-5 rounded-full shadow-luxury">
+                        <benefit.icon className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-gold" />
                       </div>
                     </div>
                   </motion.div>
                   
                   {/* Text */}
-                  <p className="text-xl md:text-2xl font-bold text-primary leading-relaxed">
+                  <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-primary leading-relaxed">
                     {benefit.text}
                   </p>
                 </div>
@@ -95,7 +95,7 @@ export const BenefitsGrid = () => {
           viewport={{ once: true }}
           className="flex justify-center"
         >
-          <Button variant="liquid-glass" size="xl" className="min-w-[400px] h-20 text-xl" asChild>
+          <Button variant="cta-hybrid" size="xl" className="w-full sm:w-auto sm:min-w-[320px] md:min-w-[400px] h-14 sm:h-16 md:h-20 text-sm sm:text-base md:text-xl max-w-[320px] sm:max-w-none mx-auto" asChild>
             <a href="#preco">QUERO COMEÇAR A GANHAR AGORA</a>
           </Button>
         </motion.div>

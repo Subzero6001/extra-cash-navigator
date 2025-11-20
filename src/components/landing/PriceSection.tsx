@@ -31,7 +31,7 @@ export const PriceSection = () => {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative order-2 lg:order-1"
+            className="relative order-1 lg:order-1"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-bronze/20 rounded-2xl sm:rounded-3xl blur-2xl" />
             <div className="relative transform hover:scale-105 transition-transform duration-500">
@@ -50,9 +50,9 @@ export const PriceSection = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative order-1 lg:order-2"
+            className="relative order-2 lg:order-2"
           >
-            <div className="absolute -top-4 -right-3 sm:-top-6 sm:-right-4 md:-right-6 bg-gradient-to-br from-gold via-gold-light to-gold text-primary font-black text-center p-3 sm:p-4 md:p-6 rounded-xl sm:rounded-2xl md:rounded-3xl shadow-luxury transform rotate-12 animate-float z-20">
+            <div className="absolute -top-8 left-1/2 -translate-x-1/2 lg:-top-6 lg:-right-6 lg:left-auto lg:translate-x-0 bg-gradient-to-br from-gold via-gold-light to-gold text-primary font-black text-center p-3 sm:p-4 md:p-6 rounded-xl sm:rounded-2xl md:rounded-3xl shadow-luxury transform rotate-12 animate-float z-20">
               <div className="text-[10px] sm:text-xs uppercase tracking-wider">Economize</div>
               <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">85%</div>
             </div>
@@ -99,9 +99,9 @@ export const PriceSection = () => {
                 </div>
 
                 <Button 
-                  variant="liquid-glass" 
+                  variant="cta-gold" 
                   size="xl" 
-                  className="w-full text-sm sm:text-base md:text-lg h-12 sm:h-14 md:h-16" 
+                  className="w-full text-xs sm:text-sm md:text-base lg:text-lg h-14 sm:h-14 md:h-16" 
                   asChild
                 >
                   <a href="#checkout">GARANTIR MINHA VAGA AGORA</a>

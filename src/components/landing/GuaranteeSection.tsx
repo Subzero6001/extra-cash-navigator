@@ -15,12 +15,12 @@ export const GuaranteeSection = () => {
           >
             <div className="relative animate-float">
               <div className="absolute inset-0 bg-gold/30 rounded-full blur-3xl animate-glow-pulse" />
-              <div className="relative w-72 h-72 rounded-full bg-gradient-to-br from-gold-light via-gold to-bronze flex items-center justify-center shadow-luxury border-8 border-pearl/20 animate-rotate-slow">
-                <div className="text-center space-y-3">
-                  <Shield className="w-24 h-24 text-primary mx-auto drop-shadow-2xl" />
-                  <p className="text-3xl font-bold text-primary">GARANTIA</p>
-                  <p className="text-2xl font-bold text-primary">INCONDICIONAL</p>
-                  <p className="text-6xl font-bold text-primary">7 DIAS</p>
+              <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 rounded-full bg-gradient-to-br from-gold-light via-gold to-bronze flex items-center justify-center shadow-luxury border-4 sm:border-6 md:border-8 border-pearl/20 animate-rotate-slow">
+                <div className="text-center space-y-1 sm:space-y-2 md:space-y-3">
+                  <Shield className="w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 text-primary mx-auto drop-shadow-2xl" />
+                  <p className="text-lg sm:text-2xl md:text-3xl font-bold text-primary">GARANTIA</p>
+                  <p className="text-base sm:text-xl md:text-2xl font-bold text-primary">INCONDICIONAL</p>
+                  <p className="text-3xl sm:text-5xl md:text-6xl font-bold text-primary">7 DIAS</p>
                 </div>
               </div>
             </div>
@@ -33,10 +33,10 @@ export const GuaranteeSection = () => {
             transition={{ delay: 0.2 }}
             className="space-y-6"
           >
-            <h2 className="text-3xl md:text-[40px] font-bold text-primary-foreground font-[Montserrat]">
+            <h2 className="text-2xl sm:text-3xl md:text-[40px] font-bold text-primary-foreground font-[Montserrat]">
               GARANTIA TOTAL DE 7 DIAS
             </h2>
-            <div className="text-xl md:text-[33px] text-primary-foreground leading-relaxed space-y-4">
+            <div className="text-base sm:text-lg md:text-xl lg:text-[33px] text-primary-foreground leading-relaxed space-y-3 sm:space-y-4">
               <p>
                 Se em 7 dias você acessar o guia, testar as estratégias e achar que não é para você — por qualquer motivo — basta enviar um único e-mail e devolvemos 100% do seu dinheiro.
               </p>

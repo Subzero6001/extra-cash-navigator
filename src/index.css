@@ -256,6 +256,19 @@
   .animate-rotate-slow {
     animation: rotate-slow 30s linear infinite;
   }
+
+  .animate-pulse-subtle {
+    animation: pulse-subtle 2s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { 
+    transform: scale(1); 
+  }
+  50% { 
+    transform: scale(1.02); 
+  }
 }
 
 /* 3D Effects */

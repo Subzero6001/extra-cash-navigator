@@ -50,9 +50,9 @@ export const FinalCTA = () => {
             className="pt-4 sm:pt-6 md:pt-8 px-2 sm:px-0"
           >
             <Button 
-              variant="liquid-glass" 
+              variant="cta-hybrid" 
               size="xl" 
-              className="w-full sm:w-auto sm:min-w-[300px] md:min-w-[350px] text-sm sm:text-base md:text-lg h-12 sm:h-14 md:h-16" 
+              className="w-full sm:w-auto sm:min-w-[300px] md:min-w-[350px] text-xs sm:text-sm md:text-base lg:text-lg h-14 sm:h-14 md:h-16 max-w-[320px] sm:max-w-none mx-auto" 
               asChild
             >
               <a href="#preco">QUERO MUDAR MINHA VIDA AGORA</a>
