@@ -49,11 +49,11 @@ export const ComparisonSection = () => {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="bg-gradient-to-br from-red-50 to-red-100 border-4 border-red-300 rounded-[32px] p-8 md:p-12 space-y-6 h-full shadow-lg">
-              <h3 className="text-3xl md:text-4xl font-bold text-red-700 text-center mb-8">
+            <div className="bg-gradient-to-br from-red-50 to-red-100 border-2 sm:border-4 border-red-300 rounded-2xl sm:rounded-[32px] p-4 sm:p-6 md:p-12 space-y-4 sm:space-y-6 h-full shadow-lg">
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-red-700 text-center mb-4 sm:mb-6 md:mb-8">
                 OUTROS CURSOS DE RENDA EXTRA
               </h3>
-              <div className="space-y-5">
+              <div className="space-y-3 sm:space-y-5">
                 {otherProducts.map((item, index) => (
                   <motion.div
                     key={index}
@@ -61,12 +61,12 @@ export const ComparisonSection = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 * index }}
-                    className="flex items-start gap-4 bg-white/50 backdrop-blur-sm rounded-xl p-4"
+                    className="flex items-start gap-2 sm:gap-4 bg-white/50 backdrop-blur-sm rounded-lg sm:rounded-xl p-3 sm:p-4"
                   >
-                    <div className="bg-red-500 p-2 rounded-full flex-shrink-0">
-                      <X className="w-6 h-6 text-white" />
+                    <div className="bg-red-500 p-1.5 sm:p-2 rounded-full flex-shrink-0">
+                      <X className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
                     </div>
-                    <p className="text-lg text-gray-800 leading-relaxed pt-1">{item}</p>
+                    <p className="text-sm sm:text-base md:text-lg text-gray-800 leading-relaxed pt-0.5 sm:pt-1">{item}</p>
                   </motion.div>
                 ))}
               </div>
@@ -81,11 +81,11 @@ export const ComparisonSection = () => {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="bg-gradient-to-br from-light-green to-cta-green/20 border-4 border-cta-green rounded-[32px] p-8 md:p-12 space-y-6 h-full shadow-luxury relative overflow-hidden">
+            <div className="bg-gradient-to-br from-light-green to-cta-green/20 border-2 sm:border-4 border-cta-green rounded-2xl sm:rounded-[32px] p-4 sm:p-6 md:p-12 space-y-4 sm:space-y-6 h-full shadow-luxury relative overflow-hidden">
               {/* Shine Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-transparent pointer-events-none" />
               
-              <h3 className="text-3xl md:text-4xl font-bold text-primary text-center mb-8 relative">
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-primary text-center mb-4 sm:mb-6 md:mb-8 relative">
                 51 FORMAS DE FAZER RENDA EXTRA
                 <motion.div
                   className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-gold to-transparent rounded-full"
@@ -95,7 +95,7 @@ export const ComparisonSection = () => {
                   transition={{ delay: 0.5 }}
                 />
               </h3>
-              <div className="space-y-5 relative">
+              <div className="space-y-3 sm:space-y-5 relative">
                 {ourProduct.map((item, index) => (
                   <motion.div
                     key={index}
@@ -103,12 +103,12 @@ export const ComparisonSection = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 * index }}
-                    className="flex items-start gap-4 bg-white/70 backdrop-blur-sm rounded-xl p-4 border border-cta-green/20 hover:border-gold/50 hover:shadow-lg transition-all duration-300"
+                    className="flex items-start gap-2 sm:gap-4 bg-white/70 backdrop-blur-sm rounded-lg sm:rounded-xl p-3 sm:p-4 border border-cta-green/20 hover:border-gold/50 hover:shadow-lg transition-all duration-300"
                   >
-                    <div className="bg-gradient-to-br from-cta-green to-primary p-2 rounded-full flex-shrink-0 shadow-md">
-                      <Check className="w-6 h-6 text-gold" />
+                    <div className="bg-gradient-to-br from-cta-green to-primary p-1.5 sm:p-2 rounded-full flex-shrink-0 shadow-md">
+                      <Check className="w-4 h-4 sm:w-6 sm:h-6 text-gold" />
                     </div>
-                    <p className="text-lg text-foreground font-semibold leading-relaxed pt-1">{item}</p>
+                    <p className="text-sm sm:text-base md:text-lg text-foreground font-semibold leading-relaxed pt-0.5 sm:pt-1">{item}</p>
                   </motion.div>
                 ))}
               </div>

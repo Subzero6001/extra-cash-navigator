@@ -47,9 +47,9 @@ export const HeroSection = () => {
               className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start px-2 sm:px-0"
             >
               <Button 
-                variant="liquid-glass" 
+                variant="cta-gold" 
                 size="xl" 
-                className="w-full sm:w-auto text-sm sm:text-base md:text-lg px-4 sm:px-8 md:px-12 h-12 sm:h-14 md:h-16" 
+                className="w-full sm:w-auto text-xs sm:text-sm md:text-base px-6 sm:px-8 md:px-12 h-14 sm:h-14 md:h-16 max-w-[320px] sm:max-w-none mx-auto sm:mx-0" 
                 asChild
               >
                 <a href="#preco">QUERO COMEÇAR AGORA</a>
@@ -75,6 +75,28 @@ export const HeroSection = () => {
                 <span>100% Seguro</span>
               </div>
             </motion.div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="relative flex justify-center items-center lg:hidden mt-6 mb-8"
+          >
+            <div className="relative max-w-[280px] mx-auto">
+              <div className="absolute inset-0 bg-gold/20 rounded-2xl blur-2xl animate-glow-pulse" />
+              <div className="relative bg-gradient-to-br from-gold-light to-gold p-1.5 rounded-2xl shadow-luxury">
+                <img
+                  src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&q=80&w=800"
+                  alt="Pessoa conquistando renda extra"
+                  className="rounded-xl w-full h-auto"
+                />
+              </div>
+              <div className="absolute -bottom-4 -right-4 bg-gradient-to-br from-cta-green to-primary text-gold font-bold text-center p-4 rounded-xl shadow-luxury border-2 border-gold/30">
+                <div className="text-3xl">51</div>
+                <div className="text-[10px] uppercase tracking-wider">Formas</div>
+              </div>
+            </div>
           </motion.div>
 
           <motion.div

@@ -43,7 +43,7 @@ export const Testimonials = () => {
           QUEM JÁ ESTÁ FAZENDO ACONTECER
         </motion.h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -62,7 +62,7 @@ export const Testimonials = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-bronze/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               {/* Card */}
-              <div className="relative bg-pearl/95 backdrop-blur-sm rounded-3xl p-8 space-y-6 shadow-luxury border border-gold/20 group-hover:border-gold/40 transition-all duration-300">
+              <div className="relative bg-pearl/95 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 space-y-4 sm:space-y-6 shadow-luxury border border-gold/20 group-hover:border-gold/40 transition-all duration-300 max-w-full">
                 {/* Quote Mark Background */}
                 <Quote className="absolute top-8 right-8 w-20 h-20 text-gold/10" />
                 
@@ -96,7 +96,7 @@ export const Testimonials = () => {
                 </div>
 
                 {/* Testimonial Text */}
-                <p className="text-foreground/80 text-lg leading-relaxed text-center relative z-10 font-[Inter]">
+                <p className="text-foreground/80 text-sm sm:text-base md:text-lg leading-relaxed text-center relative z-10 font-[Inter]">
                   "{testimonial.text}"
                 </p>
 

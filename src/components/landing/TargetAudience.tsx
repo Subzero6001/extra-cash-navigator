@@ -48,7 +48,7 @@ export const TargetAudience = () => {
             whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative transform-3d order-2 md:order-1"
+            className="relative transform-3d order-1 md:order-1"
           >
             <GoldPattern>
               <div className="relative p-8 rounded-3xl">
@@ -69,15 +69,15 @@ export const TargetAudience = () => {
 
                 {/* Badge 3D Flutuante */}
                 <motion.div
-                  className="absolute -top-6 -right-6 bg-gradient-to-br from-gold-light via-gold to-bronze rounded-full p-4 shadow-luxury"
+                  className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 bg-gradient-to-br from-gold-light via-gold to-bronze rounded-full p-2 sm:p-4 shadow-luxury"
                   animate={{ 
                     rotate: [0, 5, 0, -5, 0],
                     y: [0, -5, 0]
                   }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center">
-                    <p className="text-3xl font-bold text-gold">51</p>
+                  <div className="w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-primary flex items-center justify-center">
+                    <p className="text-2xl sm:text-3xl font-bold text-gold">51</p>
                   </div>
                 </motion.div>
               </div>
@@ -85,7 +85,7 @@ export const TargetAudience = () => {
           </motion.div>
 
           {/* Lista de Pain Points */}
-          <div className="space-y-6 order-1 md:order-2">
+          <div className="space-y-4 sm:space-y-6 order-2 md:order-2">
             {painPoints.map((point, index) => (
               <motion.div
                 key={index}
@@ -98,15 +98,15 @@ export const TargetAudience = () => {
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-gold/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
-                <div className="relative flex items-start gap-5 bg-background/80 backdrop-blur-sm border-2 border-primary/20 rounded-2xl p-6 shadow-premium hover:shadow-luxury transition-all duration-300">
-                  <div className="relative">
+                <div className="relative flex items-start gap-3 sm:gap-5 bg-background/80 backdrop-blur-sm border-2 border-primary/20 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-premium hover:shadow-luxury transition-all duration-300">
+                  <div className="relative flex-shrink-0">
                     <div className="absolute inset-0 bg-gold/20 rounded-full blur-lg group-hover:blur-xl transition-all" />
-                    <div className="relative bg-gradient-to-br from-cta-green to-primary p-3 rounded-full">
-                      <point.icon className="w-7 h-7 text-gold" />
+                    <div className="relative bg-gradient-to-br from-cta-green to-primary p-2 sm:p-3 rounded-full">
+                      <point.icon className="w-5 h-5 sm:w-7 sm:h-7 text-gold" />
                     </div>
                   </div>
                   
-                  <p className="text-xl md:text-2xl text-foreground font-medium leading-relaxed flex-1 pt-1">
+                  <p className="text-base sm:text-xl md:text-2xl text-foreground font-medium leading-relaxed flex-1 pt-0.5 sm:pt-1">
                     {point.text}
                   </p>
                 </div>
