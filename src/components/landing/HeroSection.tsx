@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { AnimatedOrbs } from "@/components/effects/AnimatedOrbs";
 import { GoldPattern } from "@/components/effects/GoldPattern";
 import { CheckCircle2 as CheckCircle, Shield, Zap } from "lucide-react";
-import heroImage from "@/assets/hero-person.jpg";
+import heroImage from "@/assets/ebook-cover.jpg";
 
 export const HeroSection = () => {
   return (
@@ -40,6 +40,28 @@ export const HeroSection = () => {
               51 maneiras práticas, testadas e sem enrolação para você aumentar sua renda ainda este mês — mesmo começando do zero.
             </p>
 
+            {/* Imagem Mobile - Entre texto e botão */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="lg:hidden relative flex justify-center items-center my-6"
+            >
+              <div className="relative">
+                <img
+                  src={heroImage}
+                  alt="Ebook 51 Formas de Renda Extra"
+                  className="w-full max-w-[280px] drop-shadow-2xl relative z-10"
+                />
+                <div className="absolute -top-3 -right-3 bg-gradient-to-br from-gold via-gold-light to-gold text-primary font-black text-center px-3 py-2 rounded-xl shadow-luxury transform rotate-12 z-20">
+                  <div className="text-[10px] uppercase tracking-wider">Guia</div>
+                  <div className="text-2xl leading-none">51</div>
+                  <div className="text-[10px] uppercase tracking-wider">Formas</div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* CTA Button */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -52,7 +74,7 @@ export const HeroSection = () => {
                 className="w-full sm:w-auto text-xs sm:text-sm md:text-base px-6 sm:px-8 md:px-12 h-14 sm:h-14 md:h-16 max-w-[320px] sm:max-w-none mx-auto sm:mx-0" 
                 asChild
               >
-                <a href="#preco">QUERO COMEÇAR AGORA</a>
+                <a href="https://pay.hotmart.com/S99768405M?checkoutMode=10" target="_blank" rel="noopener noreferrer">QUERO COMEÇAR AGORA</a>
               </Button>
             </motion.div>
 
@@ -77,27 +99,6 @@ export const HeroSection = () => {
             </motion.div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative flex justify-center items-center lg:hidden mt-6 mb-8"
-          >
-            <div className="relative max-w-[280px] mx-auto">
-              <div className="absolute inset-0 bg-gold/20 rounded-2xl blur-2xl animate-glow-pulse" />
-              <div className="relative bg-gradient-to-br from-gold-light to-gold p-1.5 rounded-2xl shadow-luxury">
-                <img
-                  src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&q=80&w=800"
-                  alt="Pessoa conquistando renda extra"
-                  className="rounded-xl w-full h-auto"
-                />
-              </div>
-              <div className="absolute -bottom-4 -right-4 bg-gradient-to-br from-cta-green to-primary text-gold font-bold text-center p-4 rounded-xl shadow-luxury border-2 border-gold/30">
-                <div className="text-3xl">51</div>
-                <div className="text-[10px] uppercase tracking-wider">Formas</div>
-              </div>
-            </div>
-          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: 50 }}

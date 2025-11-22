@@ -11,7 +11,7 @@ export const PriceSection = () => {
       <GoldPattern />
       <AnimatedOrbs />
       
-      <div className="container mx-auto max-w-[1200px] px-3 sm:px-4 md:px-6 relative z-10">
+      <div className="container mx-auto max-w-[1200px] px-4 sm:px-6 md:px-8 relative z-10 overflow-x-hidden">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -26,7 +26,7 @@ export const PriceSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center max-w-5xl mx-auto px-2 sm:px-0">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -38,7 +38,7 @@ export const PriceSection = () => {
               <img
                 src={ebookCover}
                 alt="51 Formas de Fazer Renda Extra"
-                className="w-full max-w-[280px] sm:max-w-[350px] md:max-w-[400px] mx-auto drop-shadow-2xl"
+                className="w-full max-w-[240px] sm:max-w-[280px] md:max-w-[350px] lg:max-w-[400px] mx-auto drop-shadow-2xl"
                 style={{
                   filter: "drop-shadow(0 25px 50px rgba(13, 40, 24, 0.5))"
                 }}
@@ -52,12 +52,12 @@ export const PriceSection = () => {
             viewport={{ once: true }}
             className="relative order-2 lg:order-2"
           >
-            <div className="absolute -top-8 left-1/2 -translate-x-1/2 lg:-top-6 lg:-right-6 lg:left-auto lg:translate-x-0 bg-gradient-to-br from-gold via-gold-light to-gold text-primary font-black text-center p-3 sm:p-4 md:p-6 rounded-xl sm:rounded-2xl md:rounded-3xl shadow-luxury transform rotate-12 animate-float z-20">
-              <div className="text-[10px] sm:text-xs uppercase tracking-wider">Economize</div>
-              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">85%</div>
+            <div className="absolute -top-6 left-1/2 -translate-x-1/2 lg:-top-6 lg:-right-6 lg:left-auto lg:translate-x-0 bg-gradient-to-br from-gold via-gold-light to-gold text-primary font-black text-center p-2 sm:p-3 md:p-4 lg:p-6 rounded-lg sm:rounded-xl md:rounded-2xl lg:rounded-3xl shadow-luxury transform rotate-12 animate-float z-20">
+              <div className="text-[8px] sm:text-[10px] md:text-xs uppercase tracking-wider">Economize</div>
+              <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">85%</div>
             </div>
 
-            <div className="relative bg-gradient-to-br from-pearl to-cream rounded-2xl sm:rounded-3xl md:rounded-[40px] p-4 sm:p-6 md:p-10 lg:p-12 shadow-luxury border-2 sm:border-4 border-gold/30">
+            <div className="relative bg-gradient-to-br from-pearl to-cream rounded-2xl sm:rounded-3xl md:rounded-[40px] p-4 sm:p-5 md:p-8 lg:p-10 xl:p-12 shadow-luxury border-2 sm:border-3 md:border-4 border-gold/30 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-gold/10 rounded-2xl sm:rounded-3xl md:rounded-[40px]" />
               
               <div className="relative space-y-4 sm:space-y-6 md:space-y-8">
@@ -67,9 +67,9 @@ export const PriceSection = () => {
                   </p>
                   <div>
                     <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/80 mb-2">Por apenas</p>
-                    <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cta-green to-gold animate-glow-pulse">
-                      R$ 37,90
-                    </p>
+                <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cta-green to-gold animate-glow-pulse">
+                  R$ 37,90
+                </p>
                   </div>
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground/70">
                     Pagamento único • Acesso vitalício
@@ -104,7 +104,7 @@ export const PriceSection = () => {
                   className="w-full text-xs sm:text-sm md:text-base lg:text-lg h-14 sm:h-14 md:h-16" 
                   asChild
                 >
-                  <a href="#checkout">GARANTIR MINHA VAGA AGORA</a>
+                  <a href="https://pay.hotmart.com/S99768405M?checkoutMode=10" target="_blank" rel="noopener noreferrer">GARANTIR MINHA VAGA AGORA</a>
                 </Button>
 
                 <div className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4 text-[10px] sm:text-xs md:text-sm text-foreground/60">

@@ -55,7 +55,7 @@ export const FinalCTA = () => {
               className="w-full sm:w-auto sm:min-w-[300px] md:min-w-[350px] text-xs sm:text-sm md:text-base lg:text-lg h-14 sm:h-14 md:h-16 max-w-[320px] sm:max-w-none mx-auto" 
               asChild
             >
-              <a href="#preco">QUERO MUDAR MINHA VIDA AGORA</a>
+              <a href="https://pay.hotmart.com/S99768405M?checkoutMode=10" target="_blank" rel="noopener noreferrer">QUERO MUDAR MINHA VIDA AGORA</a>
             </Button>
           </motion.div>
         </motion.div>
