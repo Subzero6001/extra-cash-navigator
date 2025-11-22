@@ -95,8 +95,8 @@ export const BenefitsGrid = () => {
           viewport={{ once: true }}
           className="flex justify-center"
         >
-          <Button variant="cta-hybrid" size="xl" className="w-full sm:w-auto sm:min-w-[320px] md:min-w-[400px] h-14 sm:h-16 md:h-20 text-sm sm:text-base md:text-xl max-w-[320px] sm:max-w-none mx-auto" asChild>
-            <a href="#preco">QUERO COMEÇAR A GANHAR AGORA</a>
+          <Button variant="cta-hybrid" size="xl" className="w-full sm:w-auto sm:min-w-[320px] md:min-w-[400px] h-14 sm:h-16 md:h-20 text-[11px] sm:text-sm md:text-base lg:text-xl max-w-[320px] sm:max-w-none mx-auto px-4" asChild>
+            <a href="https://pay.hotmart.com/S99768405M?checkoutMode=10" target="_blank" rel="noopener noreferrer">QUERO COMEÇAR A GANHAR AGORA</a>
           </Button>
         </motion.div>
       </div>
